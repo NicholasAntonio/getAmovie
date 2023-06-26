@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Indicador de Filmes</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div id="questions">
+        <h1>GetAmovie</h1>
+        <h2>Que tipo de filme deseja ver hoje?</h2>
+        <form id="quizForm">
+          <label class="custom-radio">
+            <input type="radio" name="genre" value="romance" />
+            <span class="radio-btn"
+              ><i class="las la-check"></i>
+              <div class="movie-icon">
+                <i class="las la-heartbeat"></i>
+                <h3>Romance</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="genre" value="aventura" />
+            <span class="radio-btn"
+              ><i class="las la-check"></i>
+              <div class="movie-icon">
+                <i class="las la-map-marked"></i>
+                <h3>Aventura</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="genre" value="acao" />
+            <span class="radio-btn"
+              ><i class="las la-check"></i>
+              <div class="movie-icon">
+                <i class="las la-fire-alt"></i>
+                <h3>Ação</h3>
+              </div>
+            </span>
+          </label>
+          <label class="custom-radio">
+            <input type="radio" name="genre" value="herois" />
+            <span class="radio-btn"
+              ><i class="las la-check"></i>
+              <div class="movie-icon">
+                <i class="las la-robot"></i>
+                <h3>Animação</h3>
+              </div>
+            </span>
+          </label>
+          <div class="btn">
+            <button type="submit">Obter Recomendação</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="result"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
