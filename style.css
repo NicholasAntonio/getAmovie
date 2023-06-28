@@ -24,7 +24,6 @@ body {
   justify-content: center;
   padding: 20px;
   flex-direction: column;
-  transform: scale(0.8);
 }
 
 #questions {
