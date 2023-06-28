@@ -1,177 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #182737;
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #182737;
 }
 
-.container{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    flex-direction: column;
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  transform: scale(0.8);
 }
 
-#questions{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+#questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-#questions h1{
-    font-size: 3rem;
-    font-style: italic;
-    color: #b00610;
+#questions h1 {
+  font-size: 3rem;
+  font-style: italic;
+  color: #b00610;
+  animation: entryleft 1s ease;
 }
 
-#questions h2{
-    font-size: 1.4rem;
-    font-style: italic;
-    color: #a76c06;
+#questions h2 {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #fff;
+  animation: entryRight 1s ease;
 }
 
-#quizForm{
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+#quizForm {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: entry3 1s ease;
 }
 
-#quizForm button{
-    background: transparent;
-    background-color: #b00610;
-    color: #fff;
-    border-radius: 40px;
-    height: 40px;
-    padding: 10px;
-    transition: all .3s;
+#quizForm button {
+  background: transparent;
+  background-color: #b00610;
+  color: #fff;
+  border-radius: 40px;
+  height: 60px;
+  padding: 10px;
+  transition: all 0.3s;
+  animation: entry3 1s ease;
 }
 
-#quizForm button:hover{
-    cursor: pointer;
-    background-color: #910811;
-    transform: scale(1.08);
+#quizForm button:hover {
+  cursor: pointer;
+  background-color: #910811;
+  transform: scale(1.08);
 }
 
-.custom-radio input{
-    display: none;
-}
- 
-
-.radio-btn{
-    background-color:  #121215;
-    margin: 10px;
-    width: 180px;
-    height: 200px;
-    border: 3px solid transparent;
-    display: inline-block;
-    border-radius: 10px;
-    position: relative;
-    text-align: center; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+.custom-radio input {
+  display: none;
 }
 
-.radio-btn > i{
-    color: #ffffff;
-    background-color: 	#b00610;
-    font-size: 20px;
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%) scale(2);
-    border-radius: 50px;
-    padding: 3px;
-    transition: 0.2s;
-    pointer-events: none;
-    opacity: 0 ;
+.radio-btn {
+  background-color: #121215;
+  margin: 10px;
+  width: 180px;
+  height: 200px;
+  border: 3px solid transparent;
+  display: inline-block;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.radio-btn .movie-icon{
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.radio-btn > i {
+  color: #ffffff;
+  background-color: #b00610;
+  font-size: 20px;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) scale(2);
+  border-radius: 50px;
+  padding: 3px;
+  transition: 0.2s;
+  pointer-events: none;
+  opacity: 0;
 }
 
-.radio-btn .movie-icon i{
-    font-size: 80px;
-    color: 	#b00610;
+.radio-btn .movie-icon {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.radio-btn .movie-icon h3{
-    color: 	#b00610;
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: uppercase;
+.radio-btn .movie-icon i {
+  font-size: 80px;
+  color: #b00610;
 }
 
-.custom-radio  input:checked + .radio-btn{
-    border: 3px solid 	#b00610;
+.radio-btn .movie-icon h3 {
+  color: #b00610;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-.custom-radio  input:checked + .radio-btn >i {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
+.custom-radio input:checked + .radio-btn {
+  border: 3px solid #b00610;
 }
 
+.custom-radio input:checked + .radio-btn > i {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
 
+#result {
+  width: 400px;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #121215;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
+#result h3 {
+  font-size: 18px;
+  align-self: center;
+  color: #d10b18;
+}
+
+#result p {
+  color: #b00610;
+  align-self: center;
+}
+
+#result img {
+  border-radius: 15px;
+  max-width: 200px;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: flex-start;
+  }
   #result {
-    width: 400px;
-    max-width: 300px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #121215;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
   }
+}
 
-  #result h3 {
-    font-size: 18px;
-    align-self: center;
-    color: #d10b18;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-  #result p{
-    color: #b00610;
-    align-self: center;
-  }
-  
-  #result img{
-    border-radius: 15px;
-    max-width: 200px;
-    align-self: center;
-  }
+@keyframes entryleft{
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+}
 
-  @media screen and (max-width: 768px) {
-    .container {
-        justify-content: flex-start;
+@keyframes entryRight{
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+}
+
+@keyframes entry3{
+    from{
+        opacity: 0;
+        scale: 0;
     }
-    #result{
-        align-items: flex-start;
+    to{
+        opacity: 1;
+        scale: 1;
     }
+}
+
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  border-top-color: #b00610;
+  animation: spin 1s linear infinite;
+  margin-top: 20px;
 }

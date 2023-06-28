@@ -52,10 +52,19 @@ function getMovie(genreId) {
 }
 function display(movie) {
   const resultDiv = document.getElementById("result");
-  resultDiv.innerHTML = `<h3>Esse filme pode ser do seu agrado:</h3>
+  resultDiv.innerHTML = `
+  <div class="loading"></div>
+`;
+
+  const movieInfo = `
+  <h3>Esse filme pode ser do seu agrado:</h3>
   <p>${movie.title}</p>
   <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
-  `;
+`;
+
+  setTimeout(() => {
+    resultDiv.innerHTML = movieInfo;
+  }, 1000);
 }
 
 function displayError(message) {
