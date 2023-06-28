@@ -18,10 +18,11 @@ body{
 }
 
 .container{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
     flex-direction: column;
 }
 
@@ -36,24 +37,25 @@ body{
 #questions h1{
     font-size: 3rem;
     font-style: italic;
-    color: #e50913;
+    color: #b00610;
 }
 
 #questions h2{
     font-size: 1.4rem;
     font-style: italic;
-    color: #b00610;
+    color: #a76c06;
 }
 
 #quizForm{
     width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
 #quizForm button{
     background: transparent;
-    background-color: #FFAC1C;
+    background-color: #b00610;
     color: #fff;
     border-radius: 40px;
     height: 40px;
@@ -63,7 +65,7 @@ body{
 
 #quizForm button:hover{
     cursor: pointer;
-    background-color: #a76c06;
+    background-color: #910811;
     transform: scale(1.08);
 }
 
@@ -88,7 +90,7 @@ body{
 
 .radio-btn > i{
     color: #ffffff;
-    background-color: 	#FFAC1C;
+    background-color: 	#b00610;
     font-size: 20px;
     position: absolute;
     top: -15px;
@@ -112,18 +114,18 @@ body{
 
 .radio-btn .movie-icon i{
     font-size: 80px;
-    color: 	#FFAC1C;
+    color: 	#b00610;
 }
 
 .radio-btn .movie-icon h3{
-    color: 	#FFAC1C;
+    color: 	#b00610;
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
 }
 
 .custom-radio  input:checked + .radio-btn{
-    border: 3px solid 	#FFAC1C;
+    border: 3px solid 	#b00610;
 }
 
 .custom-radio  input:checked + .radio-btn >i {
@@ -135,10 +137,41 @@ body{
 
   #result {
     width: 400px;
+    max-width: 300px;
     margin: 20px auto;
     padding: 20px;
     background-color: #121215;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #result h3 {
+    font-size: 18px;
+    align-self: center;
+    color: #d10b18;
+  }
+
+  #result p{
+    color: #b00610;
+    align-self: center;
   }
   
+  #result img{
+    border-radius: 15px;
+    max-width: 200px;
+    align-self: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+        justify-content: flex-start;
+    }
+    #result{
+        align-items: flex-start;
+    }
+}
